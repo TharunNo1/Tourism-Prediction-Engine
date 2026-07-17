@@ -60,6 +60,7 @@ class_weight
 preprocessor = make_column_transformer(
     (StandardScaler(), numeric_features),
     (OneHotEncoder(handle_unknown="ignore"), categorical_features),
+    remainder="passthrough",
 )
 
 # Define base XGBoost model
