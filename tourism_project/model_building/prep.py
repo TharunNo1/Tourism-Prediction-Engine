@@ -33,9 +33,10 @@ cat_cols = [
     "Designation",
 ]
 
-# Encoding the categorical 'Type' column
+# Encoding the categorical columns
 label_encoder = LabelEncoder()
-df[cat_cols] = label_encoder.fit_transform(df[cat_cols])
+for col in cat_cols:
+  df[col] = label_encoder.fit_transform(df[col])
 
 target_col = "ProdTaken"
 
