@@ -1,4 +1,5 @@
-from huggingface_hub import HfApi
+from huggingface_hub import HfApi, create_repo
+from huggingface_hub.errors import RepositoryNotFoundError
 import os
 
 # Retrieve token
