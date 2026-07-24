@@ -21,7 +21,7 @@ df = pd.read_csv(DATASET_PATH)
 print("Dataset loaded successfully.")
 
 # Drop the unique identifier
-df.drop(columns=["CustomerID"], inplace=True)
+df.drop(columns=["CustomerID", "Unnamed: 0"], inplace=True)
 
 # Define the categorical columns
 cat_cols = [
